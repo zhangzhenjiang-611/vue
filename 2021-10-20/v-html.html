@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-html</title>
+</head>
+<body>
+<div id="app">
+  <p v-once> {{link}}</p>
+
+  <input type="text" v-model="link">
+  <span v-html="mylink"></span>
+  <span v-text="mylink"></span>
+
+</div>
+<script src="../vue.js">
+</script>
+<script>
+  var app = new Vue({
+    el:"#app",
+    data:{
+      link:"http://www.baidu.com",
+      mylink:'<a href="http://www.sina.com">新浪</a>'
+    },
+    methods:{
+      sayHi:function (){
+      },
+      changeMajor:function (event){
+        // console.log(event.target.value);
+        this.major = event.target.value;
+      }
+    }
+  })
+</script>
+</body>
+</html>

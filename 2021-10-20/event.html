@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-html</title>
+</head>
+<body>
+<div id="app">
+{{count}}
+  <input type="text" v-model="step">
+<button type="button" @click="addbtn">增加</button>
+<button type="button" @click="reducebtn">减少</button>
+</div>
+<script src="../vue.js">
+</script>
+<script>
+  var app = new Vue({
+    el:"#app",
+    data:{
+     count:0,
+      step:1
+    },
+    methods:{
+      addbtn:function (){
+        this.count+= this.step
+      },
+      reducebtn:function (){
+        this.count-= this.step;
+      }
+    }
+  })
+</script>
+</body>
+</html>
