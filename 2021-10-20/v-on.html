@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-on</title>
+</head>
+<body>
+<div id="app">
+  请输入你的专业：<input type="text"  @input="changeMajor">
+ <!-- v-on:input = @input-->
+  我是以为{{major}}程序员
+
+</div>
+<script src="../vue.js">
+</script>
+<script>
+  var app = new Vue({
+    el:"#app",
+    data:{
+    major:''
+    },
+    methods:{
+      sayHi:function (){
+      },
+      changeMajor:function (event){
+       // console.log(event.target.value);
+        this.major = event.target.value;
+      }
+    }
+  })
+</script>
+</body>
+</html>

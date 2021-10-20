@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    请输入你的专业：<input type="text" v-model="major">
+    我是以为{{major}}程序员
+    {{[1,2,3,4][1]}}
+    {{{name:"xiaoming",age:18}.name}}
+    {{sayHi()}}
+</div>
+<script src="../vue.js">
+</script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            major:"php"
+        },
+        methods:{
+            sayHi:function (){
+               // alert("vue");
+            }
+        }
+    })
+</script>
+</body>
+</html>

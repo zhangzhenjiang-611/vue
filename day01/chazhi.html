@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插值表达式</title>
+</head>
+<body>
+<div id="app">
+我是以为{{major}}程序员
+  {{[1,2,3,4][1]}}
+  {{{name:"xiaoming",age:18}.name}}
+  {{sayHi()}}
+</div>
+<script src="../vue.js">
+</script>
+<script>
+  var app = new Vue({
+    el:"#app",
+    data:{
+      major:"php"
+    },
+    methods:{
+      sayHi:function (){
+        alert("vue");
+      }
+    }
+  })
+</script>
+</body>
+</html>
