@@ -10,6 +10,12 @@
   <input type="text" v-model="step">
 <button type="button" @click="addbtn">增加</button>
 <button type="button" @click="reducebtn">减少</button>
+  <p v-on:mousemove="mo">
+    今天是周一！！！
+    {{x}} <br/>
+    {{y}} <br/>
+    <span @mousemove.stop>停止鼠标移动</span>
+  </p>
 </div>
 <script src="../vue.js">
 </script>
@@ -18,7 +24,9 @@
     el:"#app",
     data:{
      count:0,
-      step:1
+      step:1,
+      x:0,
+      y:0
     },
     methods:{
       addbtn:function (){
@@ -26,6 +34,10 @@
       },
       reducebtn:function (){
         this.count-= this.step;
+      },
+      mo:function (event) {
+        this.x=event.clientX,
+        this.y=event.clientY
       }
     }
   })
