@@ -1,0 +1,32 @@
+{
+    "name": "edu/admin-permission",
+    "desciption": "common rbac permission",
+    "keywords": [
+        "rbac",
+        "permission"
+    ],
+    "require": {
+         "tymon/jwt-auth": "1.0.0",
+        "prettus/l5-repository": "2.6.x",
+        "dingo/api": "3.0.0"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Edu\\Permission\\": "src"
+        },
+        "classmap": {
+
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "poviders": [
+                "Edu\\Permission\\PermissionServiceProvider"
+
+            ]
+        }
+    }
+}
